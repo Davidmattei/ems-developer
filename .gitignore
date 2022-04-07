@@ -1,3 +1,6 @@
 /elasticms
 /elasticms-demo
 /website-skeleton
+/.env
+/cli/var/
+/vendor/

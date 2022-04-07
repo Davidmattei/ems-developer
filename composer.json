@@ -1,0 +1,37 @@
+{
+    "name": "elasticms/ems-developer",
+    "description": "Developer cli",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Mattei",
+            "email": "david.mattei@sappico.be"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "ext-json": "*",
+        "symfony/config": "^5.0",
+        "symfony/console": "^5.0",
+        "symfony/dependency-injection": "^5.0",
+        "symfony/dotenv": "^5.0",
+        "symfony/finder": "^5.0",
+        "symfony/http-client": "^5.0",
+        "symfony/http-kernel": "^5.0",
+        "symfony/stopwatch": "^5.0",
+        "symfony/yaml": "^5.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Cli\\": "cli/src"
+        }
+    }
+}

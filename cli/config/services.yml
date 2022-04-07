@@ -1,0 +1,17 @@
+services:
+  _defaults:
+    autowire: true
+    bind:
+#      $emsUrl:  '%env(string:EMS_URL)%'
+#      $emsToken:  '%env(string:EMS_TOKEN)%'
+
+  _instanceof:
+    Symfony\Component\EventDispatcher\EventSubscriberInterface:
+      tags: ['kernel.event_subscriber']
+
+  Cli\:
+    resource: '../src'
+
+  Cli\Command\TestCommand:
+    tags:
+      - { name: console.command, command: cli:test }
